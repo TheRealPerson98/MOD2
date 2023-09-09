@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "com.person98.mod2.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"ExampleMixin",
+		"BounceMixin",
+		"MixinSheepEntity"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
