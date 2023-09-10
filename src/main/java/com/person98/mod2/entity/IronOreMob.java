@@ -1,5 +1,6 @@
 package com.person98.mod2.entity;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -8,6 +9,8 @@ import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.world.World;
 
 public class IronOreMob extends PathAwareEntity {
+    private boolean shouldTransformBack = false;
+
     public IronOreMob(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
@@ -21,12 +24,22 @@ public class IronOreMob extends PathAwareEntity {
     protected void initGoals() {
         super.initGoals();
 
-        this.goalSelector.add(1, new SwimGoal(this));
+        this.targetSelector.add(1, new RevengeGoal(this));
         this.goalSelector.add(2, new MeleeAttackGoal(this, 1.0D, true));
-        this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0D));
-        this.goalSelector.add(4, new LookAtEntityGoal(this, PathAwareEntity.class, 8.0F));
-        this.goalSelector.add(5, new LookAroundGoal(this));
-        this.targetSelector.add(6, new RevengeGoal(this));
 
+    }
+    @Override
+    public void tick() {
+        super.tick();
+
+        if (this.shouldTransformBack && this.age >= 100) {  // Check age for 5 seconds
+            // Turn back to coal ore
+            this.getWorld().setBlockState(this.getBlockPos(), Blocks.IRON_ORE.getDefaultState());
+            this.remove(RemovalReason.DISCARDED);  // or other appropriate removal reason
+        }
+    }
+
+    public void setShouldTransformBack(boolean shouldTransformBack) {
+        this.shouldTransformBack = shouldTransformBack;
     }
 }

@@ -25,12 +25,8 @@ public class CoalOreMob extends PathAwareEntity {
     protected void initGoals() {
         super.initGoals();
 
-        this.goalSelector.add(1, new SwimGoal(this));
+        this.targetSelector.add(1, new RevengeGoal(this));
         this.goalSelector.add(2, new MeleeAttackGoal(this, 1.0D, true));
-        this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0D));
-        this.goalSelector.add(4, new LookAtEntityGoal(this, PathAwareEntity.class, 8.0F));
-        this.goalSelector.add(5, new LookAroundGoal(this));
-        this.targetSelector.add(6, new RevengeGoal(this));
 
     }
 
