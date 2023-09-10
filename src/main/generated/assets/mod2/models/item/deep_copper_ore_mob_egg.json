@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mod2:item/deep_copper_ore_mob_egg"
+  }
+}

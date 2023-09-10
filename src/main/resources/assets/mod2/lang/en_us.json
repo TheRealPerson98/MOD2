@@ -1,0 +1,24 @@
+{
+  "item.mod2.coal_ore_mob_egg": "Coal Ore Mob Egg",
+  "item.mod2.diamond_ore_mob_egg": "Diamond Ore Mob Egg",
+  "item.mod2.emerald_ore_mob_egg": "Emerald Ore Mob Egg",
+  "item.mod2.gold_ore_mob_egg": "Gold Ore Mob Egg",
+  "item.mod2.iron_ore_mob_egg": "Iron Ore Mob Egg",
+  "item.mod2.lapis_ore_mob_egg": "Lapis Ore Mob Egg",
+  "item.mod2.redstone_ore_mob_egg": "Redstone Ore Mob Egg",
+  "item.mod2.copper_ore_mob_egg": "Copper Ore Mob Egg",
+
+  "item.mod2.deep_coal_ore_mob_egg": "DeepSlate Coal Ore Mob Egg",
+  "item.mod2.deep_diamond_ore_mob_egg": "DeepSlate Diamond Ore Mob Egg",
+  "item.mod2.deep_emerald_ore_mob_egg": "DeepSlate Emerald Ore Mob Egg",
+  "item.mod2.deep_gold_ore_mob_egg": "DeepSlate Gold Ore Mob Egg",
+  "item.mod2.deep_iron_ore_mob_egg": "DeepSlate Iron Ore Mob Egg",
+  "item.mod2.deep_lapis_ore_mob_egg": "DeepSlate Lapis Ore Mob Egg",
+  "item.mod2.deep_redstone_ore_mob_egg": "DeepSlate Redstone Ore Mob Egg",
+  "item.mod2.deep_copper_ore_mob_egg": "DeepSlate Copper Ore Mob Egg",
+
+
+
+
+  "itemgroup.mod2": "Mod2 Group"
+}

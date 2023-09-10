@@ -1,6 +1,5 @@
 package com.person98.mod2.entity;
 
-import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
@@ -8,11 +7,8 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.world.World;
 
-public class CoalOreMob extends PathAwareEntity {
-    private boolean shouldTransformBack = false;
-
-
-    public CoalOreMob(EntityType<? extends PathAwareEntity> entityType, World world) {
+public class CoalDeepSlateOreMob extends PathAwareEntity {
+    public CoalDeepSlateOreMob(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
     public static DefaultAttributeContainer.Builder createMobAttributes() {
@@ -32,20 +28,5 @@ public class CoalOreMob extends PathAwareEntity {
         this.goalSelector.add(5, new LookAroundGoal(this));
         this.targetSelector.add(6, new RevengeGoal(this));
 
-    }
-
-    @Override
-    public void tick() {
-        super.tick();
-
-        if (this.shouldTransformBack && this.age >= 100) {  // Check age for 5 seconds
-            // Turn back to coal ore
-            this.getWorld().setBlockState(this.getBlockPos(), Blocks.COAL_ORE.getDefaultState());
-            this.remove(RemovalReason.DISCARDED);  // or other appropriate removal reason
-        }
-    }
-
-    public void setShouldTransformBack(boolean shouldTransformBack) {
-        this.shouldTransformBack = shouldTransformBack;
     }
 }

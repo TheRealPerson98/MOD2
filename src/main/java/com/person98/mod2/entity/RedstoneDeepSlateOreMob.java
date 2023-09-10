@@ -7,8 +7,8 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.world.World;
 
-public class CopperDeepslateOreMob extends PathAwareEntity {
-    public CopperDeepslateOreMob(EntityType<? extends PathAwareEntity> entityType, World world) {
+public class RedstoneDeepSlateOreMob extends PathAwareEntity {
+    public RedstoneDeepSlateOreMob(EntityType<? extends PathAwareEntity> entityType, World world) {
         super(entityType, world);
     }
     public static DefaultAttributeContainer.Builder createMobAttributes() {
