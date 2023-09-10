@@ -5,7 +5,9 @@
 	"mixins": [
 		"ExampleMixin",
 		"BounceMixin",
-		"MixinSheepEntity"
+		"MixinSheepEntity",
+		"ReverseCreeperMixin",
+		"BlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

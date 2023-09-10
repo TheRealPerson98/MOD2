@@ -18,6 +18,9 @@
 		"main": [
           "com.person98.mod2.Mod2"
 		],
+		"client": [
+			"com.person98.mod2.Mod2Client"
+		],
 		"fabric-datagen": [
 			"com.person98.mod2.Mod2DataGenerator"
 		]
