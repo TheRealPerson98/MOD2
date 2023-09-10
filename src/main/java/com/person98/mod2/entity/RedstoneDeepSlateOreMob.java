@@ -1,5 +1,6 @@
 package com.person98.mod2.entity;
 
+import com.person98.mod2.util.OreMob;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
@@ -8,7 +9,7 @@ import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.world.World;
 
-public class RedstoneDeepSlateOreMob extends PathAwareEntity {
+public class RedstoneDeepSlateOreMob extends PathAwareEntity  implements OreMob {
     private boolean shouldTransformBack = false;
 
     public RedstoneDeepSlateOreMob(EntityType<? extends PathAwareEntity> entityType, World world) {

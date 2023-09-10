@@ -1,6 +1,7 @@
 package com.person98.mod2.mixin;
 
-import com.person98.mod2.entity.CoalOreMob;
+import com.person98.mod2.entity.*;
+import com.person98.mod2.util.OreMob;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -62,13 +63,14 @@ public class BlockMixin {
 
         if (entityType != null && world instanceof World realWorld && !world.isClient()) {
             Entity oreMobEntity = entityType.create(realWorld);
-            if (oreMobEntity instanceof CoalOreMob oreMob) {
+            if (oreMobEntity instanceof OreMob oreMob) {
                 oreMob.refreshPositionAndAngles(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, 0, 0);
-                realWorld.spawnEntity(oreMob);
+                realWorld.spawnEntity(oreMobEntity);
                 oreMob.setShouldTransformBack(true);
                 realWorld.setBlockState(pos, Blocks.AIR.getDefaultState());
                 ci.cancel();
             }
         }
     }
+
 }
