@@ -39,7 +39,10 @@ public class CoalDeepSlateOreMob extends PathAwareEntity implements OreMob {
             this.remove(RemovalReason.DISCARDED);  // or other appropriate removal reason
         }
     }
-
+    @Override
+    public void refreshPositionAndAngles(double x, double y, double z, float yaw, float pitch) {
+        this.updatePositionAndAngles(x, y, z, yaw, pitch);
+    }
     public void setShouldTransformBack(boolean shouldTransformBack) {
         this.shouldTransformBack = shouldTransformBack;
     }

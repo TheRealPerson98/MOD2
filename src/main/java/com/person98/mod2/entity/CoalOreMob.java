@@ -14,6 +14,7 @@ public class CoalOreMob extends PathAwareEntity implements OreMob {
     private boolean shouldTransformBack = false;
 
 
+
     public CoalOreMob(EntityType<? extends PathAwareEntity> entityType, World world) {
 
         super(entityType, world);
@@ -30,6 +31,10 @@ public class CoalOreMob extends PathAwareEntity implements OreMob {
 
         this.goalSelector.add(1, new MeleeAttackPlayerGoal(this, 1.0D, false)); // 1.0D is the speed, adjust as needed
 
+    }
+    @Override
+    public void refreshPositionAndAngles(double x, double y, double z, float yaw, float pitch) {
+        this.updatePositionAndAngles(x, y, z, yaw, pitch);
     }
 
 
